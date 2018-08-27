@@ -15,7 +15,9 @@ const rotaBing = (router.get = ('/',
         resultado += data;
       });
       resp.on('end', data => {
-        response.json(JSON.parse(resultado));
+        let info = JSON.parse(resultado);
+        let bingImage = 'https://www.bing.com' + info.images[0].url;
+        response.json(bingImage);
       });
     }
   );
