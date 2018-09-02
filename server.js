@@ -28,11 +28,10 @@ const rotaBing = (router.get = ('/bing',
   });
 }));
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
-app.use('/bing', rotaBing);
+app.use('/', rotaBing);
 
 let PORT = process.env.PORT || 3000;
 
